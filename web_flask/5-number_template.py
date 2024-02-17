@@ -36,12 +36,14 @@ def pythontext(text="is cool"):
 
 @web_flask.route('/number/<int:n>', strict_slashes=False)
 def integer(n):
+    if isinstance(n, int):
     return "{} is a number".format(n)
 
 
 
 @web_flask.route('/number_template/<int:n>', strict_slashes=False)
-def numb(n):
+def num(n=None):
+    if isinstance(n, int):
     return render_template("5-number.html", number=n)
 
 
