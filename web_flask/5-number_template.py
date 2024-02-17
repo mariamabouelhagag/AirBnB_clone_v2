@@ -41,7 +41,7 @@ def integer(n):
 
 
 @web_flask.route('/number_template/<int:n>', strict_slashes=False)
-def num(n):
+def num(n=None):
     return render_template("5-number.html", number=n)
 
 
