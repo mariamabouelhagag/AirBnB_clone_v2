@@ -23,7 +23,7 @@ def hbnb():
 
 @web_flask.rout('/c/<text>', strict_slashes=False)
 def ctext(text):
-    return "C {}".format(text.replace("_"," "))
+    return "C {}".format(text.replace("_", " "))
 
 
 if __name__ == "__main__":
