@@ -21,7 +21,7 @@ def hbnb():
     return "HBNB"
 
 
-@web_flask.rout('/c/<text>', strict_slashes=False)
+@web_flask.route('/c/<text>', strict_slashes=False)
 def ctext(text):
     return "C {}".format(text.replace("_", " "))
 
