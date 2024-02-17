@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+"""A script that starts a flask web application
+Your web application must be listening on 0.0.0.0, port 5000
+"""
+from flask import Flask
+
+web_flask = Flask(__name__)
+
+@web_flask.route("/")
+def homepage():
+    return "Hello HBNB!"
+
+if __name__ == "__main__":
+    web_flask.run(debug=None, port=5000, host="0.0.0.0")
