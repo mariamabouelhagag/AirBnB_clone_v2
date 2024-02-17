@@ -6,7 +6,7 @@ from flask import Flask
 
 web_flask = Flask(__name__)
 
-@web_flask.route("/")
+@web_flask.route("/",strict_slashes=False)
 def homepage():
     return "Hello HBNB!"
 
